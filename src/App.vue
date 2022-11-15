@@ -5,8 +5,20 @@
 
 <script>
 import Navbar from "@/components/Navbar.vue";
+import { onMounted } from "vue";
+import router from "@/router";
 export default {
   components: { Navbar },
+  setup() {
+    const checkUser = () => {
+      const token = localStorage.getItem("token");
+      if (!token) router.push("/login");
+    };
+
+    onMounted(() => {
+      checkUser();
+    });
+  },
 };
 </script>
 
