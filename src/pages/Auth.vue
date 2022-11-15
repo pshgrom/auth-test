@@ -31,7 +31,7 @@ import { login } from "@/api/user";
 import { useStore } from "vuex";
 
 export default {
-  name: "Auth",
+  name: "Auth1",
   components: {
     CustomInput,
   },
