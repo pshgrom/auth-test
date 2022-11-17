@@ -6,9 +6,7 @@ import { worker } from "./mocks/browser";
 
 const app = createApp(App);
 
-if (process.env.NODE_ENV === "development") {
-  worker.start().then();
-}
+worker.start().then();
 
 app.use(router);
 app.use(store);
